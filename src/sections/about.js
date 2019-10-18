@@ -77,6 +77,28 @@ const CustomSpan = styled.span`
   }
 `;
 
+const SkillsSpan = styled.span`
+position: relative;
+font-style: italic;
+color: var(--white);
+font-weight: 600;
+display: inline-block;
+word-break: break-word;
+white-space: normal;
+
+&:after {
+  content: '';
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  transform: rotate(-2deg);
+  background: var(--primary-light);
+}
+`;
+
 const StackTitle = styled.h2`
   font-weight: 600;
   color: var(--text-highlight);
@@ -175,9 +197,9 @@ const About = () => {
             <StackTitle>
               My <CustomSpan>Skills</CustomSpan> :
             </StackTitle>
-            <CustomSpan>Front End: </CustomSpan>
+            <SkillsSpan>Front End: </SkillsSpan>
             <Stack>{aboutMe.childMarkdownRemark.frontmatter.frontend}</Stack>
-            <CustomSpan>Back End: </CustomSpan>
+            <SkillsSpan>Back End: </SkillsSpan>
             <Stack>{aboutMe.childMarkdownRemark.frontmatter.backend}</Stack>
           </AboutText>
           <ButtonsWrapper>
