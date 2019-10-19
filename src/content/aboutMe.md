@@ -15,6 +15,6 @@ I always want to _learn more_, _do more_, and _be more_. I’m also a firm belie
 
 I love _"and believe"_ the quote by _Steve Jobs_:
 
-<span>Stay Hungry, Stay Foolish</span>
+<quote>Stay Hungry, Stay Foolish!</quote>
 
 I’m a _smart worker_, _super curious_, _passionate_, _committed_, and also a _fast learner_!
