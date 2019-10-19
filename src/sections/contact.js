@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-import Button from "../components/UI/Button";
+import Button from "../components/UI/button"; 
 import Input from "../components/UI/input";
 import TextArea from "../components/UI/textarea";
 
