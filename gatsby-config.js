@@ -3,7 +3,7 @@ module.exports = {
     title: `Akshay Gulhane | Full Stack Developer`,
     description: `I’m Akshay Gulhane, a Full Stack Developer, from India.`,
     author: `Akshay Gulhane`,
-    siteUrl: 'https://akshaygulhane.com',
+    siteUrl: 'https://akshr.dev',
     social: {
       twitter: 'akshaygulhane',
       instagram: 'akshaygulhane',
@@ -20,9 +20,9 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
-        trackingId: 'UA-141189217-1D',
+        trackingId: 'UA-85607794-1',
         // Defines where to place the tracking script - `true` in the head and `false` in the body
-        head: false,
+        head: true,
       },
     },
     `gatsby-plugin-use-dark-mode`,
