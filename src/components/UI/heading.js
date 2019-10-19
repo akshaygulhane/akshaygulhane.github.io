@@ -3,14 +3,14 @@ import styled from 'styled-components';
 
 const HeadingWrapper = styled.div`
   text-align: center;
-  margin-bottom: 7rem;
+  margin-bottom: 3rem;
 
   @media ${props => props.theme.mediaQueries.medium} {
-    margin-bottom: 5rem;
+    margin-bottom: 3rem;
   }
 
   @media ${props => props.theme.mediaQueries.small} {
-    margin-bottom: 4.5rem;
+    margin-bottom: 1.5rem;
   }
 `;
 
@@ -58,7 +58,6 @@ const SubTitle = styled.h2`
     font-size: 1.7rem;
   }
 `;
-
 const Heading = ({ title, subtitle }) => {
   return (
     <HeadingWrapper>

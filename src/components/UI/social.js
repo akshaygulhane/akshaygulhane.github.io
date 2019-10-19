@@ -4,14 +4,11 @@ import { useStaticQuery, graphql } from 'gatsby';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faGithub,
-  faFacebookF,
   faLinkedinIn,
-  faInstagram,
-  faYoutube,
   faTwitter,
 } from '@fortawesome/free-brands-svg-icons';
 
-const Email = styled.a`
+const StyledText = styled.p`
   color: var(--text-highlight);
   font-size: 2rem;
   position: relative;
@@ -37,7 +34,7 @@ const SocialWrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 10rem;
+  margin-bottom: 5rem;
 
   @media ${props => props.theme.mediaQueries.medium} {
     margin-bottom: 8rem;
@@ -114,10 +111,7 @@ const Social = () => {
         siteMetadata {
           social {
             twitter
-            instagram
             linkedin
-            youtube
-            facebook
             github
             email
           }
@@ -125,12 +119,10 @@ const Social = () => {
       }
     }
   `);
-    console.log('site: ', site);
+
   return (
     <>
-      <Email href={`mailto:${site.siteMetadata.social.email}`}>
-        {site.siteMetadata.social.email}
-      </Email>
+    <StyledText>You can also reach me on:</StyledText>
       <SocialWrapper>
         <StyledLink
           rel="noreferrer"

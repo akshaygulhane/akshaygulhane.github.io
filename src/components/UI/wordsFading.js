@@ -3,23 +3,23 @@ import styled from 'styled-components';
 import { animated, useTransition, config } from 'react-spring';
 
 const WORDS = [
-  { id: 0, text: 'professional' },
-  { id: 1, text: 'committed' },
-  { id: 2, text: 'passionate' },
+  { id: 0, text: 'Full Stack Developer' },
+  { id: 1, text: 'Technology Consultant' },
+  { id: 2, text: 'Mentor' },
 ];
 
 const Wrapper = styled.div`
   font-weight: 600;
-  width: 110px;
+  width: 15vw;
   position: relative;
   display: inline-block;
-  text-align: center;
+  text-align: left;
   font-style: italic;
   color: var(--text-highlight);
   transition: color 0.2s ease-out;
 
   & span {
-    text-align: center;
+    text-align: left;
     width: 100%;
   }
 
@@ -74,7 +74,7 @@ const wordsFading = () => {
   );
   return (
     <Wrapper>
-      <i style={{ visibility: 'hidden' }}>self-taught</i>
+      <i style={{ visibility: 'hidden' }}>an</i>
       {wordsTransition.map(({ item, props, key }) => (
         <animated.span key={key} style={props}>
           {item.text}
