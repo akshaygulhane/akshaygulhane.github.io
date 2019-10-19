@@ -59,8 +59,7 @@ const Portfolio = () => {
       <Contained>
         <Wrapper>
           <Heading
-            title="Portfolio"
-            subtitle={`Check <span>what</span> I've been doing <span>lately</span>`}
+            title="My Recent Work"
           />
           <PortfolioWrapper>
             {items.edges.map(item => (

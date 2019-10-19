@@ -102,7 +102,7 @@ white-space: normal;
 const StackTitle = styled.h2`
   font-weight: 600;
   color: var(--text-highlight);
-  margin-top: 5rem;
+  margin-top: 20rem;
   font-size: 2rem;
   transition: color 0.2s ease-out;
 
@@ -142,7 +142,8 @@ const StyledIcon = styled(FontAwesomeIcon)`
 
 const ButtonsWrapper = styled.div`
   display: flex;
-
+  margin-top: 5rem;
+  
   & a:first-of-type {
     margin-right: 3rem;
   }
@@ -157,10 +158,33 @@ const ButtonsWrapper = styled.div`
   }
 `;
 
+const CustomQuote = styled.span`
+  position: relative;
+  font-style: italic;
+  font-weight: 600;
+  display: inline-block;
+  word-break: break-word;
+  white-space: normal;
+  color: var(--primary);
+  font-size: 2rem;
+
+  &:after {
+    content: '';
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    clip-path: polygon(4% 10%,98% 10%,100% 95%,0 100%);
+    background-color: white;
+  }
+`;
+
 // Takes custom components from markdown, and maps to my custom components
 const renderCustom = new rehypeReact({
   createElement: React.createElement,
-  components: { 'scroll-link': ScrollLink, span: CustomSpan },
+  components: { 'scroll-link': ScrollLink, span: CustomSpan, quote: CustomQuote },
 }).Compiler;
 
 const About = () => {
@@ -190,24 +214,16 @@ const About = () => {
         <Wrapper>
           <Heading
             title="About me"
-            subtitle="If you’re <span>wondering</span> who <span>I am</span>…"
           />
           <AboutText>
             {renderCustom(aboutMe.childMarkdownRemark.htmlAst)}
-            <StackTitle>
-              My <CustomSpan>Skills</CustomSpan> :
-            </StackTitle>
-            <SkillsSpan>Front End: </SkillsSpan>
-            <Stack>{aboutMe.childMarkdownRemark.frontmatter.frontend}</Stack>
-            <SkillsSpan>Back End: </SkillsSpan>
-            <Stack>{aboutMe.childMarkdownRemark.frontmatter.backend}</Stack>
           </AboutText>
           <ButtonsWrapper>
             <ButtonLink
               solid
               target="_blank"
               rel="noreferrer"
-              href={`${siteUrl.siteMetadata.siteUrl}/${
+              href={`/${
                 aboutMe.childMarkdownRemark.frontmatter.resume
               }`}
             >
@@ -215,6 +231,13 @@ const About = () => {
               Resume
             </ButtonLink>
           </ButtonsWrapper>
+          <StackTitle>
+              My <CustomSpan>Skills</CustomSpan> :
+            </StackTitle>
+            <SkillsSpan>Front End: </SkillsSpan>
+            <Stack>{aboutMe.childMarkdownRemark.frontmatter.frontend}</Stack>
+            <SkillsSpan>Back End: </SkillsSpan>
+            <Stack>{aboutMe.childMarkdownRemark.frontmatter.backend}</Stack>
         </Wrapper>
       </Contained>
     </StyledSection>

@@ -1,25 +1,17 @@
-import React from 'react';
-import styled from 'styled-components';
-import { useStaticQuery, graphql } from 'gatsby';
-import Img from 'gatsby-image';
-import useDarkMode from 'use-dark-mode';
+import React from "react";
+import styled from "styled-components";
+
+import Button from "../components/UI/Button";
+import Input from "../components/UI/input";
+import TextArea from "../components/UI/textarea";
 
 import {
   Contained,
   StyledSection,
-  Wrapper,
-} from '../components/layout/elements';
-import Heading from '../components/UI/heading';
-import Social from '../components/UI/social';
-
-const LogoImage = styled(Img)`
-  width: 15%;
-  margin-bottom: 1.5rem;
-
-  @media ${props => props.theme.mediaQueries.medium} {
-    width: 25%;
-  }
-`;
+  Wrapper
+} from "../components/layout/elements";
+import Heading from "../components/UI/heading";
+import Social from "../components/UI/social";
 
 const CopyRight = styled.p`
   font-weight: 700;
@@ -29,41 +21,46 @@ const CopyRight = styled.p`
   text-transform: uppercase;
 `;
 
-const Contact = () => {
-  const { value: darkMode } = useDarkMode(false);
-  const { darkLogo, lightLogo } = useStaticQuery(graphql`
-    query {
-      darkLogo: file(relativePath: { eq: "logo/logovertical_black.png" }) {
-        childImageSharp {
-          fluid(maxWidth: 250, quality: 80) {
-            ...GatsbyImageSharpFluid_tracedSVG
-          }
-        }
-      }
-      lightLogo: file(relativePath: { eq: "logo/logovertical_white.png" }) {
-        childImageSharp {
-          fluid(maxWidth: 250, quality: 80) {
-            ...GatsbyImageSharpFluid_tracedSVG
-          }
-        }
-      }
-    }
-  `);
+const FormWrapper = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10rem;
 
+  @media ${props => props.theme.mediaQueries.medium} {
+    margin-bottom: 8rem;
+  }
+
+  @media ${props => props.theme.mediaQueries.small} {
+    margin-bottom: 6rem;
+  }
+`;
+
+const StyledForm = styled.form`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+`;
+
+const Contact = () => {
   return (
     <StyledSection id="contact">
       <Contained>
         <Wrapper>
-          <Heading
-            title="Contact me"
-            subtitle="If you want to <span>talk</span>, you can <span>find me</span> at:"
-          />
+          <Heading title="Contact me" />
+          <FormWrapper>
+            <StyledForm
+              action="https://formspree.io/akshay.gulhane@outlook.com"
+              method="POST"
+            >
+              <Input placeholder="Your Name.." name="name"/>
+              <Input placeholder="Your Email.." name="email"/>
+              <TextArea placeholder="Your Message! " name="message"/>
+              <Button>Submit</Button>
+            </StyledForm>
+          </FormWrapper>
           <Social />
-          {darkMode ? (
-            <LogoImage fluid={lightLogo.childImageSharp.fluid} />
-          ) : (
-            <LogoImage fluid={darkLogo.childImageSharp.fluid} />
-          )}
           <CopyRight>Copyright © {new Date().getFullYear()}, Akshay</CopyRight>
         </Wrapper>
       </Contained>
