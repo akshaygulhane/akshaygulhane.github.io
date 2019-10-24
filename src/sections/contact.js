@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-import Button from "../components/UI/button"; 
+import Button from "../components/UI/button";
 import Input from "../components/UI/input";
 import TextArea from "../components/UI/textarea";
 
@@ -43,6 +43,26 @@ const StyledForm = styled.form`
   align-items: center;
 `;
 
+const StyledInput = styled.input`
+  padding: 0.5em;
+  margin: 0.5em;
+  background: var(--white);
+  border: solid 1px var(--primary);
+  border-radius: 3px;
+  text-transform: uppercase;
+  width: 20vw;
+`;
+
+const StyledTextArea = styled.textarea`
+  padding: 0.5em;
+  margin: 0.5em;
+  background: var(--white);
+  border: solid 1px var(--primary);
+  border-radius: 3px;
+  text-transform: uppercase;
+  width: 20vw;
+`;
+
 const Contact = () => {
   return (
     <StyledSection id="contact">
@@ -54,9 +74,9 @@ const Contact = () => {
               action="https://formspree.io/akshay.gulhane@outlook.com"
               method="POST"
             >
-              <Input placeholder="Your Name.." name="name"/>
-              <Input placeholder="Your Email.." name="email"/>
-              <TextArea placeholder="Your Message! " name="message"/>
+              <StyledInput placeholder="Your Name" name="name" />
+              <StyledInput placeholder="Your Email" name="email" />
+              <StyledTextArea placeholder="Your Message! " name="message" rows="4"/>
               <Button>Submit</Button>
             </StyledForm>
           </FormWrapper>
