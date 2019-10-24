@@ -181,6 +181,30 @@ const CustomQuote = styled.span`
   }
 `;
 
+const AlertSpan = styled.span`
+position: relative;
+font-style: italic;
+font-weight: 600;
+display: inline-block;
+word-break: break-word;
+white-space: normal;
+color: white;
+font-size: 2rem;
+
+&:after {
+  content: '';
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  clip-path: polygon(4% 10%,98% 10%,100% 95%,0 100%);
+  background-color: maroon;
+}
+`;
+
+
 // Takes custom components from markdown, and maps to my custom components
 const renderCustom = new rehypeReact({
   createElement: React.createElement,
@@ -238,6 +262,7 @@ const About = () => {
             <Stack>{aboutMe.childMarkdownRemark.frontmatter.frontend}</Stack>
             <SkillsSpan>Back End: </SkillsSpan>
             <Stack>{aboutMe.childMarkdownRemark.frontmatter.backend}</Stack>
+            <AlertSpan>This sections is "Work In Progress"..</AlertSpan>
         </Wrapper>
       </Contained>
     </StyledSection>
