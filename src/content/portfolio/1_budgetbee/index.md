@@ -1,7 +1,7 @@
 ---
 title: 'Budget Bee'
-live: 'https://fidalgodev.github.io/budgety/'
-source: 'https://github.com/fidalgodev/budgety'
+live: ''
+source: ''
 stack: 'React'
 image: 'budgetbee.png'
 ---

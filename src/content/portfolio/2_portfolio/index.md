@@ -1,7 +1,7 @@
 ---
 title: 'My Portfolio'
 live: 'https://akshr.dev/'
-source: 'https://github.com/fidalgodev/portfolio_gatsby'
+source: 'https://github.com/akshaygulhane/gatsby-portfolio'
 stack: 'React - Styled Components - Gatsby'
 image: 'akshay.PNG'
 ---
