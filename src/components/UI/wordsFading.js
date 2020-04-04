@@ -10,7 +10,7 @@ const WORDS = [
 
 const Wrapper = styled.div`
   font-weight: 600;
-  width: 15vw;
+  width: 30vw;
   position: relative;
   display: inline-block;
   text-align: left;
@@ -24,19 +24,19 @@ const Wrapper = styled.div`
   }
 
   @media ${props => props.theme.mediaQueries.large} {
-    width: 105px;
+    width: 50vw !important;
   }
 
   @media ${props => props.theme.mediaQueries.medium} {
-    width: 100px;
+    width: 50vw !important;
   }
 
   @media ${props => props.theme.mediaQueries.small} {
-    width: 95px;
+    width: 50vw !important;
   }
 
   @media ${props => props.theme.mediaQueries.smallest} {
-    width: 90px;
+    width: 50vw !important;
   }
 `;
 

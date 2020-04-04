@@ -69,7 +69,7 @@ const Contact = () => {
       <Contained>
         <Wrapper>
           <Heading title="Contact me" />
-          <FormWrapper>
+          {/* <FormWrapper>
             <StyledForm
               action="https://formspree.io/akshay.gulhane@outlook.com"
               method="POST"
@@ -79,7 +79,7 @@ const Contact = () => {
               <StyledTextArea placeholder="Your Message! " name="message" rows="4"/>
               <Button>Submit</Button>
             </StyledForm>
-          </FormWrapper>
+          </FormWrapper> */}
           <Social />
           <CopyRight>Copyright © {new Date().getFullYear()}, Akshay</CopyRight>
         </Wrapper>
