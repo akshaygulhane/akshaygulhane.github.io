@@ -2,7 +2,7 @@
 title: 'Budget Bee'
 live: ''
 source: ''
-stack: 'React'
+stack: 'React.js - Node.js - Express.js - MongoDB - Bootstrap 4'
 image: 'budgetbee.png'
 ---
 
