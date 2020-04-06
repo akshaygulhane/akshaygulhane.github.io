@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: `Akshay Gulhane | Full Stack Developer`,
-    description: `I’m Akshay Gulhane, a Full Stack Developer, from India.`,
+    title: `Akshay Gulhane | Full Stack Web Developer`,
+    description: `I’m Akshay Gulhane, a Full Stack Web Developer`,
     author: `Akshay Gulhane`,
     siteUrl: 'https://akshr.dev',
     social: {
@@ -11,7 +11,7 @@ module.exports = {
       youtube: 'akshaygulhane',
       facebook: 'akshaygulhane',
       github: 'akshaygulhane',
-      email: 'akshay@akshr.dev',
+      email: 'akshay.gulhane@outlook.com',
     },
     // name of the image for social website share, should be in static folder
     imageShare: `share.jpg`,
