@@ -19,6 +19,26 @@ const SmallWrapper = styled.div`
   margin: 0 auto;
 `;
 
+
+const ButtonsWrapper = styled.div`
+  display: flex;
+  margin-top: 5rem;
+
+  & a:first-of-type {
+    margin-right: 3rem;
+  }
+
+  @media ${props => props.theme.mediaQueries.medium} {
+    justify-content: space-around;
+    width: 100%;
+
+    & a:first-of-type {
+      margin-right: 0rem;
+    }
+  }
+`;
+
+
 const Title = styled(animated.h1)`
   font-weight: 200;
   margin: 0;
@@ -111,16 +131,16 @@ const Home = () => {
             {/* <Link to="about-me" spy={true} smooth={true}>
               <Button style={ButtonSpring}>About me</Button>
             </Link> */}
-            {/* <ButtonLink target="_blank" solid href={live} rel="noreferrer">
-              <StyledIcon icon={faLink} />
-              Visit
-            </ButtonLink> */}
+            <ButtonsWrapper>
+            <ButtonLink target="_blank" style={ButtonSpring} solid href="https://calendly.com/akshay-gulhane/15min" rel="noreferrer">
+              Schedule 15-minutes call!
+            </ButtonLink>
+            </ButtonsWrapper>
             <Link
               to="https://drive.google.com/open?id=1ffFy2qffYPxt5htNlS5aFv5boJL-3M6v"
               spy={true}
               smooth={true}
             >
-              <Button style={ButtonSpring}>Resume</Button>
             </Link>
           </SmallWrapper>
         </Wrapper>
