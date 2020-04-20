@@ -1,19 +1,19 @@
-import React from 'react';
+import React from "react";
 
-import Layout from '../components/layout/layout';
+import Layout from "../components/layout/layout";
 
 // Sections
-import Home from '../sections/home';
-import About from '../sections/about';
-import Portfolio from '../sections/portfolio';
-import Contact from '../sections/contact';
+import Home from "../sections/home";
+import About from "../sections/about";
+import Portfolio from "../sections/portfolio";
+import Contact from "../sections/contact";
 
 const IndexPage = () => (
   <Layout>
     <Home />
     <About />
     <Portfolio />
-   {/*<Testimonials /> */}
+    {/*<Testimonials /> */}
     <Contact />
   </Layout>
 );

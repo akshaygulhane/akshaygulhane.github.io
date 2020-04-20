@@ -1,15 +1,15 @@
-import React from 'react';
-import styled from 'styled-components';
-import { Link } from 'gatsby';
+import React from "react";
+import styled from "styled-components";
+import { Link } from "gatsby";
 
-import Layout from '../components/layout/layout';
+import Layout from "../components/layout/layout";
 import {
   StyledSection,
   Contained,
-  Wrapper,
-} from '../components/layout/elements';
-import Heading from '../components/UI/heading';
-import NotFoundSVG from '../images/not_found.svg';
+  Wrapper
+} from "../components/layout/elements";
+import Heading from "../components/UI/heading";
+import NotFoundSVG from "../images/not_found.svg";
 
 const StyledLink = styled(Link)`
   outline: none;
@@ -28,7 +28,7 @@ const StyledLink = styled(Link)`
   padding: 1.4rem 3.5rem;
   margin: 0rem;
   cursor: pointer;
-  box-shadow: 'none';
+  box-shadow: "none";
   transition: all 0.2s ease-out;
 
   &:hover {

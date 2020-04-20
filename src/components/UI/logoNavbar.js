@@ -1,13 +1,13 @@
-import React, { useState } from 'react';
-import { useStaticQuery, graphql } from 'gatsby';
-import styled from 'styled-components';
-import { Link } from 'react-scroll';
-import { Link as GatsbyLink } from 'gatsby';
-import Img from 'gatsby-image';
-import useDarkMode from 'use-dark-mode';
-import { useTransition, animated } from 'react-spring';
+import React, { useState } from "react";
+import { useStaticQuery, graphql } from "gatsby";
+import styled from "styled-components";
+import { Link } from "react-scroll";
+import { Link as GatsbyLink } from "gatsby";
+import Img from "gatsby-image";
+import useDarkMode from "use-dark-mode";
+import { useTransition, animated } from "react-spring";
 
-import ScrollToTop from '../UI/scrollToTop';
+import ScrollToTop from "../UI/scrollToTop";
 
 const StyledLink = styled(Link)`
   cursor: pointer;
@@ -28,7 +28,7 @@ const LogoNavBar = ({ notOnePageSection, setMenuOpened }) => {
   const ScrollTopTransition = useTransition(showScrollTop, null, {
     from: { opacity: 0 },
     enter: { opacity: 1 },
-    leave: { opacity: 0 },
+    leave: { opacity: 0 }
   });
 
   // Logo transition based on dark or light mode
@@ -36,9 +36,9 @@ const LogoNavBar = ({ notOnePageSection, setMenuOpened }) => {
   // Animation
   const LogoNavBarTransition = useTransition(darkMode, null, {
     config: { duration: 200 },
-    from: { position: 'absolute', opacity: 0 },
+    from: { position: "absolute", opacity: 0 },
     enter: { opacity: 1 },
-    leave: { opacity: 0 },
+    leave: { opacity: 0 }
   });
 
   // Query for logos

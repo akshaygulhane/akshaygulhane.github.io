@@ -1,11 +1,11 @@
-import React from 'react';
-import styled from 'styled-components';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faLink } from '@fortawesome/free-solid-svg-icons';
-import { faGithub } from '@fortawesome/free-brands-svg-icons';
-import Img from 'gatsby-image';
+import React from "react";
+import styled from "styled-components";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faLink } from "@fortawesome/free-solid-svg-icons";
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
+import Img from "gatsby-image";
 
-import ButtonLink from '../components/UI/buttonLink';
+import ButtonLink from "../components/UI/buttonLink";
 
 const Wrapper = styled.div`
   display: flex;
@@ -60,7 +60,7 @@ const Title = styled.h1`
   }
 
   &:after {
-    content: '';
+    content: "";
     z-index: -1;
     position: absolute;
     top: 0;

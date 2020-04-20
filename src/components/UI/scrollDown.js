@@ -1,9 +1,9 @@
-import React from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
-import { Link } from 'react-scroll';
-import styled from 'styled-components';
-import { useSpring, animated, config } from 'react-spring';
+import React from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
+import { Link } from "react-scroll";
+import styled from "styled-components";
+import { useSpring, animated, config } from "react-spring";
 
 const ScrollDownWrapper = styled(animated.div)`
   position: absolute;
@@ -38,11 +38,11 @@ const ScrollDown = () => {
     config: config.wobbly,
     delay: 500,
     opacity: 1,
-    transform: 'translate(-50%, 0px)',
+    transform: "translate(-50%, 0px)",
     from: {
       opacity: 0,
-      transform: 'translate(-50%, 40px)',
-    },
+      transform: "translate(-50%, 40px)"
+    }
   });
   return (
     <ScrollDownWrapper style={ScrollDownSpring}>

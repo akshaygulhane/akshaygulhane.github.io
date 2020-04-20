@@ -1,6 +1,6 @@
-import React from 'react';
-import styled from 'styled-components';
-import { Link } from 'react-scroll';
+import React from "react";
+import styled from "styled-components";
+import { Link } from "react-scroll";
 
 const StyledLink = styled(Link)`
   text-decoration: none;
@@ -27,8 +27,8 @@ const NavItem = ({ link, clicked }) => (
   <StyledLink
     onClick={clicked}
     to={`${link
-      .split(' ')
-      .join('-')
+      .split(" ")
+      .join("-")
       .toLowerCase()}`}
     spy={true}
     smooth={true}

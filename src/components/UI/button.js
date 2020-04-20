@@ -1,6 +1,6 @@
-import React from 'react';
-import styled from 'styled-components';
-import { animated } from 'react-spring';
+import React from "react";
+import styled from "styled-components";
+import { animated } from "react-spring";
 
 const StyledButton = styled(animated.button)`
   outline: none;

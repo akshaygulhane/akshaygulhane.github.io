@@ -1,21 +1,21 @@
-import React from 'react';
-import styled from 'styled-components';
-import { useTrail, animated, config } from 'react-spring';
+import React from "react";
+import styled from "styled-components";
+import { useTrail, animated, config } from "react-spring";
 
-import NavItem from './navItem/navItem';
+import NavItem from "./navItem/navItem";
 
-const LINKS = ['About me', 'Portfolio', 'Blog', 'Contact'];
+const LINKS = ["About me", "Portfolio", "Blog", "Contact"];
 
 const StyledNav = styled.nav`
   display: flex;
   overflow: hidden;
   flex: 1;
-  flex-direction: ${({ mobile }) => (mobile ? 'column' : 'row')};
-  justify-content: ${({ mobile }) => (mobile ? 'center' : 'flex-end')};
+  flex-direction: ${({ mobile }) => (mobile ? "column" : "row")};
+  justify-content: ${({ mobile }) => (mobile ? "center" : "flex-end")};
   align-items: center;
 
   @media ${({ theme }) => theme.mediaQueries.large} {
-    margin-right: ${({ mobile }) => (mobile ? '0rem' : '4rem')};
+    margin-right: ${({ mobile }) => (mobile ? "0rem" : "4rem")};
   }
 `;
 
@@ -25,13 +25,13 @@ const NavItems = ({ mobile, clicked }) => {
     config: config.wobbly,
     delay: 300,
     opacity: 1,
-    transform: 'translateY(0px)',
+    transform: "translateY(0px)",
     from: {
       opacity: 0,
-      transform: 'translateY(20px)',
-      display: 'flex',
-      cursor: 'pointer',
-    },
+      transform: "translateY(20px)",
+      display: "flex",
+      cursor: "pointer"
+    }
   });
 
   return (

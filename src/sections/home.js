@@ -1,17 +1,18 @@
-import React from 'react';
-import styled from 'styled-components';
-import { Link } from 'react-scroll';
-import { useSpring, animated, config } from 'react-spring';
+import React from "react";
+import styled from "styled-components";
+import { Link } from "react-scroll";
+import { useSpring, animated, config } from "react-spring";
+import ButtonLink from "../components/UI/buttonLink";
 
 import {
   Contained,
   StyledSection,
-  Wrapper,
-} from '../components/layout/elements';
-import BackgroundLogo from '../components/UI/backgroundLogo';
-import ScrollDown from '../components/UI/scrollDown';
-import Button from '../components/UI/button';
-import WordsFading from '../components/UI/wordsFading';
+  Wrapper
+} from "../components/layout/elements";
+import BackgroundLogo from "../components/UI/backgroundLogo";
+import ScrollDown from "../components/UI/scrollDown";
+import Button from "../components/UI/button";
+import WordsFading from "../components/UI/wordsFading";
 
 const SmallWrapper = styled.div`
   width: 90%;
@@ -69,8 +70,8 @@ const Home = () => {
     config: config.wobbly,
     delay: 200,
     opacity: 1,
-    transform: 'translateX(0px)',
-    from: { opacity: 0, transform: 'translateX(40px)' },
+    transform: "translateX(0px)",
+    from: { opacity: 0, transform: "translateX(40px)" }
   });
 
   // Sub title animation
@@ -78,8 +79,8 @@ const Home = () => {
     config: config.stiff,
     delay: 300,
     opacity: 1,
-    transform: 'translateY(0px)',
-    from: { opacity: 0, transform: 'translateY(40px)' },
+    transform: "translateY(0px)",
+    from: { opacity: 0, transform: "translateY(40px)" }
   });
 
   // Button animation
@@ -87,19 +88,19 @@ const Home = () => {
     config: config.stiff,
     delay: 600,
     opacity: 1,
-    from: { opacity: 0 },
+    from: { opacity: 0 }
   });
 
   return (
     <StyledSection fullHeight id="header">
-      {/* <BackgroundLogo /> */}
+      <BackgroundLogo />
       <Contained>
         <Wrapper>
           <SmallWrapper>
             <Title style={TitleSpring}>
-              Hello{' '}
+              Hello{" "}
               <span role="img" aria-label="Cool hand emoji">
-              👋🏻
+                👋🏻
               </span>
               <br />
               I'm <span>Akshay</span>
@@ -107,8 +108,19 @@ const Home = () => {
             <SubTitle style={SubTitleSpring}>
               A <WordsFading />
             </SubTitle>
-            <Link to="about-me" spy={true} smooth={true}>
+            {/* <Link to="about-me" spy={true} smooth={true}>
               <Button style={ButtonSpring}>About me</Button>
+            </Link> */}
+            {/* <ButtonLink target="_blank" solid href={live} rel="noreferrer">
+              <StyledIcon icon={faLink} />
+              Visit
+            </ButtonLink> */}
+            <Link
+              to="https://drive.google.com/open?id=1ffFy2qffYPxt5htNlS5aFv5boJL-3M6v"
+              spy={true}
+              smooth={true}
+            >
+              <Button style={ButtonSpring}>Resume</Button>
             </Link>
           </SmallWrapper>
         </Wrapper>
