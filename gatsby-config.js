@@ -6,7 +6,7 @@ module.exports = {
     siteUrl: 'https://akshr.dev',
     social: {
       twitter: 'akshaygulhane',
-      instagram: 'akshaygulhane',
+      instagram: 'coder_aks',
       linkedin: 'akshaygulhane',
       youtube: 'akshaygulhane',
       facebook: 'akshaygulhane',
