@@ -1,22 +1,22 @@
-import React from 'react';
-import { useStaticQuery, graphql } from 'gatsby';
-import styled from 'styled-components';
-import Img from 'gatsby-image';
-import { useSpring, animated } from 'react-spring';
+import React from "react";
+import { useStaticQuery, graphql } from "gatsby";
+import styled from "styled-components";
+import Img from "gatsby-image";
+import { useSpring, animated } from "react-spring";
 
 const StyledImage = styled(Img)`
   position: absolute !important;
   user-select: none;
   background-color: transparent;
-  top: -30%;
+  top: 20vh !important;
   overflow: hidden;
-  opacity: 0.5;
-  right: -5%;
-  width: 50%;
-  transform: rotate(-15deg);
+  // opacity: 0.9;
+  border-radius: 50%;
+  right: 5%;
+  width: 50vh;
 
   @media ${props => props.theme.mediaQueries.largest} {
-    top: -30%;
+    top: 30% !important;
   }
 
   @media ${props => props.theme.mediaQueries.large} {
@@ -32,19 +32,20 @@ const StyledImage = styled(Img)`
 
   @media ${props => props.theme.mediaQueries.small} {
     top: 0%;
-    width: 65%;
+    right: 2%;
+    width: 45%;
   }
 
   @media ${props => props.theme.mediaQueries.smaller} {
     top: 0%;
-    right: -12%;
-    width: 80%;
+    right: 2%;
+    width: 40%;
   }
 
   @media ${props => props.theme.mediaQueries.smallest} {
     top: 0%;
-    right: -12%;
-    width: 70%;
+    right: 2%;
+    width: 40%;
   }
 `;
 
@@ -53,7 +54,7 @@ const BackgroundLogo = () => {
   const BackgroundLogoSpring = useSpring({
     delay: 200,
     opacity: 1,
-    from: { opacity: 0 },
+    from: { opacity: 0 }
   });
   const { file } = useStaticQuery(graphql`
     query {

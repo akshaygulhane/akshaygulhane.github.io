@@ -1,34 +1,13 @@
-import React from 'react';
-import styled from 'styled-components';
-import { useStaticQuery, graphql } from 'gatsby';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import React from "react";
+import styled from "styled-components";
+import { useStaticQuery, graphql } from "gatsby";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faGithub,
   faLinkedinIn,
   faTwitter,
-} from '@fortawesome/free-brands-svg-icons';
-
-const StyledText = styled.p`
-  color: var(--text-highlight);
-  font-size: 2rem;
-  position: relative;
-  font-weight: 600;
-  text-decoration: none;
-  margin-bottom: 4rem;
-  transition: color 0.2s ease-out;
-
-  @media ${props => props.theme.mediaQueries.medium} {
-    font-size: 1.8rem;
-  }
-
-  @media ${props => props.theme.mediaQueries.small} {
-    font-size: 1.7rem;
-  }
-
-  @media ${props => props.theme.mediaQueries.smallest} {
-    font-size: 1.4rem;
-  }
-`;
+  faInstagram
+} from "@fortawesome/free-brands-svg-icons";
 
 const SocialWrapper = styled.div`
   display: flex;
@@ -42,6 +21,25 @@ const SocialWrapper = styled.div`
 
   @media ${props => props.theme.mediaQueries.small} {
     margin-bottom: 6rem;
+  }
+`;
+
+const Email = styled.a`
+  color: var(--text-highlight);
+  font-size: 2rem;
+  position: relative;
+  font-weight: 600;
+  text-decoration: none;
+  margin-bottom: 4rem;
+  transition: color 0.2s ease-out;
+  @media ${props => props.theme.mediaQueries.medium} {
+    font-size: 1.8rem;
+  }
+  @media ${props => props.theme.mediaQueries.small} {
+    font-size: 1.7rem;
+  }
+  @media ${props => props.theme.mediaQueries.smallest} {
+    font-size: 1.4rem;
   }
 `;
 
@@ -114,6 +112,7 @@ const Social = () => {
             linkedin
             github
             email
+            instagram
           }
         }
       }
@@ -122,7 +121,9 @@ const Social = () => {
 
   return (
     <>
-    <StyledText>You can also reach me on:</StyledText>
+      <Email href={`mailto:${site.siteMetadata.social.email}`}>
+        {site.siteMetadata.social.email}
+      </Email>
       <SocialWrapper>
         <StyledLink
           rel="noreferrer"
@@ -149,6 +150,16 @@ const Social = () => {
           href={`https://www.twitter.com/${site.siteMetadata.social.twitter}`}
         >
           <StyledIcon icon={faTwitter} />
+        </StyledLink>
+        <StyledLink
+          rel="noreferrer"
+          target="_blank"
+          aria-label="Instagram"
+          href={`https://www.instagram.com/${
+            site.siteMetadata.social.instagram
+          }`}
+        >
+          <StyledIcon icon={faInstagram} />
         </StyledLink>
       </SocialWrapper>
     </>
