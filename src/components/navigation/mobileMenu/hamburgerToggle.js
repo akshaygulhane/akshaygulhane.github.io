@@ -1,5 +1,5 @@
-import React from 'react';
-import styled from 'styled-components';
+import React from "react";
+import styled from "styled-components";
 
 const StyledLabel = styled.label`
   cursor: pointer;
@@ -25,7 +25,7 @@ const StyledLabel = styled.label`
   .bar {
     &:before,
     &:after {
-      content: '';
+      content: "";
       width: 50%;
       height: 15%;
       background: var(--primary);
