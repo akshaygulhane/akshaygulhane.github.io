@@ -11,7 +11,7 @@ module.exports = {
       youtube: 'akshaygulhane',
       facebook: 'akshaygulhane',
       github: 'akshaygulhane',
-      email: 'akshay.gulhane@outlook.com',
+      email: 'hello@akshr.dev',
     },
     // name of the image for social website share, should be in static folder
     imageShare: `share.jpg`,
