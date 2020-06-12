@@ -82,5 +82,12 @@ module.exports = {
       },
     },
     `gatsby-plugin-offline`,
+    {
+      resolve: `gatsby-plugin-hotjar`,
+      options: {
+        id: 1853818,
+        sv: 6
+      },
+    },
   ],
 };
