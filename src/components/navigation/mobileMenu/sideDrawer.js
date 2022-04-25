@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { animated } from "react-spring";
 
 import NavItems from "../navItems/navItems";
-import DarkModeToggle from "../../UI/darkModeToggle";
+import DarkModeToggle from "../../UI/DarkModeToggle";
 import useLockBodyScroll from "../../../utils/useLockScroll";
 
 const BackgroundWrapper = styled(animated.div)`

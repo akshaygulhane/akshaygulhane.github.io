@@ -11,8 +11,8 @@ import {
 } from "../components/layout/elements";
 import BackgroundLogo from "../components/UI/backgroundLogo";
 import ScrollDown from "../components/UI/scrollDown";
-import Button from "../components/UI/button";
-import WordsFading from "../components/UI/wordsFading";
+// import Button from "../components/UI/button";
+import WordsFading from "../components/UI/WordsFading";
 
 const SmallWrapper = styled.div`
   width: 90%;
@@ -132,7 +132,7 @@ const Home = () => {
               <Button style={ButtonSpring}>About me</Button>
             </Link> */}
             <ButtonsWrapper>
-            <ButtonLink target="_blank" style={ButtonSpring} solid href="https://calendly.com/akshay-gulhane/15min" rel="noreferrer">
+            <ButtonLink target="_blank" style={ButtonSpring} solid href="https://calendly.com/akshay-gulhane/30min" rel="noreferrer">
               Schedule 15-minutes call!
             </ButtonLink>
             </ButtonsWrapper>
