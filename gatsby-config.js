@@ -43,15 +43,21 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-plugin-prefetch-google-fonts`,
+      resolve: `gatsby-plugin-webfonts`,
       options: {
-        fonts: [
-          {
-            family: `Montserrat`,
-            variants: [`200`, `400`, `400i`, `600`, `600i`, `700`],
-          },
-        ],
-      },
+        fonts: {
+          google: [
+            {
+              family: `Montserrat`,
+              variants: [`200`, `400`, `400i`, `600`, `600i`, `700`],
+              //subsets: ['latin']
+              //text: 'Hello'
+              //fontDisplay: 'swap',
+              //strategy: 'selfHosted' // 'base64' || 'cdn'
+            },
+          ]
+        }
+      }
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
