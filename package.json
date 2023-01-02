@@ -10,7 +10,7 @@
     "@fortawesome/react-fontawesome": "^0.1.4",
     "add": "^2.0.6",
     "babel-plugin-styled-components": "^1.10.0",
-    "gatsby": "^2.23.3",
+    "gatsby": "^5.3.3",
     "gatsby-cli": "^2.12.45",
     "gatsby-image": "^2.1.0",
     "gatsby-plugin-google-analytics": "^2.0.20",
